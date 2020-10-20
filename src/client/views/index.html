@@ -1,52 +1,37 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
+        <title>Research of NLP API</title>
         <meta charset="utf-8">
-        <title>Test</title>
-        <link rel="stylesheet" href="/styles/resets.css">
-        <link rel="stylesheet" href="/styles/base.css">
-        <link rel="stylesheet" href="/styles/header.css">
-        <link rel="stylesheet" href="/styles/form.css">
-        <link rel="stylesheet" href="/styles/footer.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Hebe Sun">
+        <meta name="description" content="An amazing API project">
+        <meta property="og:title" content="Research of NLP API">
+        <meta property="og:description" content="An amazing API project">
+        
+        <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;700&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet"> 
     </head>
-
     <body>
+        <main class="wrapper">
+            <div class="center-wrapper">
+                <div class="content-sides">
+                <section class="content-left">
+                    <h1>Ready? Type it!</h1>
+                    <form id="userForm">
+                        <textarea id="textToCheck" name="input"></textarea>
+                        <button type="submit">CHECK IT</button>
+                    </form>
+                </section>
 
-        <header>
-            <div class="">
-                Logo
+                <section class="content-right">
+                    <div id="person" class="person"><img id="person-image"></div>
+                    <div id="loader" class="loader hide">Loading...</div>
+                    <div id="results" class="hide-opacity">
+                    </div>
+                </section>
+                </div>
             </div>
-            <div class="">
-                navigation
-            </div>
-        </header>
-
-        <main>
-            <section>
-                <form class="" onsubmit="return Client.handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
-                </form>
-            <section>
-
-            <section>
-                <strong>Form Results:</strong>
-                <div id="results"></div>
-            </section>
-        </main>
-
-        <footer>
-            <p>This is a footer</p>
-        </footer>
-
-        <script>
-            // Check that service workers are supported
-            if ('serviceWorker' in navigator) {
-                // Use the window load event to keep the page load performant
-                window.addEventListener('load', () => {
-                    navigator.serviceWorker.register('/service-worker.js');
-                });
-            }
-        </script>
+          </main>
     </body>
 </html>
